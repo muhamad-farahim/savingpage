@@ -1,0 +1,34 @@
+.page-tentang-box {
+  height: 598px;
+  background-color: $tanpabatasgreen;
+  
+
+  .container{
+    display: grid;
+  grid-template-columns: 1fr 2fr;
+  }
+
+  .box-text {
+
+    display: grid;
+    justify-content: center;
+    align-items: center;
+
+    background-color: blue;
+
+    h1 {
+      padding: 20px;
+      font-family: "Poppins";
+      font-size: 38px;
+      font-weight: 700;
+      line-height: 57px;
+      letter-spacing: 0em;
+      text-align: left;
+      color: #fff;
+    }
+  }
+  .box-box {
+    background-color: red;
+    padding: 20px;
+  }
+}

@@ -1,0 +1,159 @@
+@mixin slider-text {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 25%;
+  animation-name: text;
+  animation-duration: 1000ms;
+  transition: opacity 300ms;
+  transition: left 300ms;
+}
+@mixin slider-img {
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 370px;
+  height: 370px;
+  background-color: #000;
+  z-index: 2;
+  transition: 300ms;
+}
+
+.page-tentang-slider {
+  background-color: $tanpabatasgreen;
+  color: #fff;
+  padding-bottom: 150px;
+  position: relative;
+
+  .container {
+    width: 80%;
+  }
+
+  .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 50px;
+
+  }
+  .arrow-left{
+    left: 57px;
+  }
+
+  .arrow-right{
+    right: 57px;
+  }
+}
+
+// .transition{}
+
+.slider {
+  &__slide {
+    height: 500px;
+    padding: 40px;
+    padding-top: 0;
+    padding-bottom: 20px;
+    // background-color: $danger;
+  }
+  &__display {
+    // background-color: aqua;
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  &__imgcirc {
+    &__left {
+      @include slider-img();
+      left: 0;
+    }
+
+    &__right {
+      @include slider-img();
+      left: calc(100% - 370px);
+    }
+  }
+  &__txt {
+    &__left {
+      @include slider-text();
+      left: 0;
+    }
+
+    &__right {
+      @include slider-text();
+      left: calc(100% - 25%);
+    }
+  }
+
+  .right {
+    right: 0;
+  }
+  .left {
+    left: 0;
+  }
+
+  &__span {
+    display: block;
+    opacity: 0;
+    transition: opacity 500ms;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+
+    h5 {
+      font-weight: 700;
+      font-size: 22px;
+      line-height: 47px;
+    }
+
+    &--active {
+      // display: inline;
+      opacity: 1;
+    }
+  }
+
+  &__img {
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    transition: opacity 300ms;
+    transform: translateY(-50%);
+
+    &--active {
+      opacity: 1;
+    }
+  }
+}
+
+.progress {
+  &__progressbar {
+    height: 45px;
+    width: 95%;
+    background-color: $tanpabatascream;
+    overflow: hidden;
+    border-radius: 40px;
+    padding: 5px;
+    position: relative;
+    // margin-left: 5px;
+  }
+
+  &__progress {
+    height: 100%;
+    width: 80px;
+    margin-left: 80%;
+    background-color: #ffcd29;
+    border-radius: 50px;
+    transition: margin-left 300ms;
+    position: relative;
+    img {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 30px;
+    }
+  }
+}

@@ -1,0 +1,57 @@
+.page-tentang-visimisi {
+//   background-color: $tanpabatascream;
+  h2 {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 57px;
+    margin-bottom: 50px;
+  }
+
+  h4{ 
+    font-family: 'Poppins';
+font-size: 22px;
+font-weight: 700;
+line-height: 33px;
+
+
+  }
+
+  p{
+font-family: 'Poppins';
+font-size: 16px;
+font-weight: 500;
+line-height: 24px;
+
+
+  }
+
+  .cardd {
+    min-height: 394px;
+    width: 334px;
+    border-radius: 25px;
+    box-shadow: #7ccc6c 0px 4px 40px ;
+
+    .card-body{
+        margin: 29px 6px;
+    }
+}
+
+  .cardgreen{
+    background: #7ccc6c;
+    box-shadow: #7ccc6c 0px 4px 40px ;
+  }
+  .cardred{
+    background: #ff808b;
+    box-shadow: #ff808b 0px 4px 40px ;
+  }
+  .cardorange{
+    background: #ff8f1c;
+    box-shadow: #ff8f1c 0px 4px 40px ;
+  }
+
+  .test{
+    column-gap: 100px;
+  }
+}
